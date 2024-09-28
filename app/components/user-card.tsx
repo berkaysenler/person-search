@@ -3,6 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import { Phone, Mail, MapPin } from 'lucide-react'
 
+
 interface User {
   id: string
   name: string
@@ -14,6 +15,9 @@ interface User {
 interface UserCardProps {
   user: User
 }
+
+
+
 
 export function UserCard({ user }: UserCardProps) {
   return (
@@ -37,6 +41,7 @@ export function UserCard({ user }: UserCardProps) {
           <div className="flex items-center gap-2">
             <Mail className="w-4 h-4 text-muted-foreground" />
             <span>{user.email}</span>
+            
           </div>
         )}
         {user.location && (
@@ -44,6 +49,7 @@ export function UserCard({ user }: UserCardProps) {
             <MapPin className="w-4 h-4 text-muted-foreground" />
             <span>{user.location}</span>
           </div>
+
         )}
       </CardContent>
     </Card>
